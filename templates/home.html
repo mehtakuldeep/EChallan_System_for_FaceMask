@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="{{ url_for('static', filename = 'script.js') }}"></script>
+  <link href="{{ url_for('static', filename = 'script22.css') }}" rel="stylesheet">
+  <title></title>
+</head>
+<body>
+  <p class="title">Face Mask Detection</p>
+  <img src = "{{url_for('static', filename = '12.jpg')}}" alt="FaceRecognition" >
+
+  <div class="colorbox">
+  <ul class="tabs">
+    <li data-tab-target="#home" class="active tab">Home</li>
+    <li data-tab-target="#AddNewData" class="tab">AddNewData</li>
+    <li data-tab-target="#predict" class="tab">Recogniton</li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" data-tab-content class="active">
+      <ul>
+        <li>For the past 2 years we have seen the necessity of masks.​</li>
+        <li>There have been many laws that has been passed so that people wear it compulsorily but still they don’t follow it and find loopholes in the system and escape.​</li>
+        <li>We are providing an application where we can detect people who are not wearing masks and at the same time fine them for their actions</li>
+      </ul>
+    </div>
+    <div id="AddNewData" data-tab-content>
+      <form method = "POST" action = "{{ url_for('predict') }}" enctype = "multipart/form-data">
+				<legend></legend>
+				<div class="addData">
+					Name          <input type="text" name="username" >
+					<br>
+					AadharNumber  <input type="number" name="aadhar">
+					<br>
+					ContactNumber <input type="tel" name="mobile">
+					<br>
+          Image <input type="file" id="myFile" name="image" >
+					<br>
+					<br>
+					<input type="submit" class="button" value = "Submit">
+				</div>
+				</form>
+    </div>
+    <div id="predict" data-tab-content>
+      <button type="button" class="fr">Start App</button>
+      <br>
+      <img class="vs" src="{{ url_for('video') }}" width="50%"/>
+    </div>
+  </div>
+</div>
+</body>
+</html>

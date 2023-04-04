@@ -1,0 +1,125 @@
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+.title{
+  color: #ffffff;
+  position: absolute;
+  top: 50px;
+  left: 800px;
+  font-size: 50px;
+  font-weight: bold;
+
+
+}
+body {
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: #243b55;
+}
+img{
+  height: 100%;
+  width: 40%;
+
+}
+.colorbox {
+  position: relative;
+  background-color:#141e30;
+  float: right;
+  Width:700px;
+  height:500px;
+  top: 200px;
+  right: 100px;
+  color: white;
+}
+.tabs {
+
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 60px auto;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color: #87ceeb;
+}
+
+.tab:hover {
+  background-color: #AAA;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.addData{
+position: absolute;
+top: 100px;
+left: 100px;
+}
+fieldset{
+  background-color: "solid black";
+  width: 650px;
+}
+legend {
+background-color: "grey";
+color: "solid red";
+padding: 10px 20px;
+}
+input{
+  margin: 20px;
+  background: "grey";
+  box-sizing: border-box;
+
+}
+.gallery{
+  position: absolute;
+  top: 250px;
+  left: 750px;
+}
+
+.button, .fr{
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16;
+  background-color: #;
+  padding: 20px 50px;
+  border: 3px solid red;
+  border-radius: 10px;
+}
+
+.button:hover, .dl:hover , .fr:hover{
+  animation: pulsate 1s
+  ease-in-out;
+}
+
+@keyframes pulsate {
+  0%{
+    box-shadow:
+    0 0 25px #5ddcff,
+    0 0 50px #4e00c2;
+  }
+}
+
+
+.fr{
+  position: absolute;
+  top: 120px;
+  left: 270px;
+}
